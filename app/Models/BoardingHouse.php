@@ -36,5 +36,11 @@ class BoardingHouse extends Model
 
     public function testimonials()
     {
-        return $this->hasMany(Testimonial::class);}
+        return $this->hasMany(Testimonial::class);
+    }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
 }
