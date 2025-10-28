@@ -15,6 +15,7 @@ class BoardingHouse extends Model
         'thumbnail',
         'city_id',
         'category_id',
+        'description',
         'price',
         'address'
     ];
@@ -32,6 +33,11 @@ class BoardingHouse extends Model
     public function rooms()
     {
         return $this->hasMany(Room::class);
+    }
+
+    public function bonuses()
+    {
+        return $this->hasMany(Bonus::class);
     }
 
     public function testimonials()

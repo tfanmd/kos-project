@@ -14,6 +14,7 @@ class Room extends Model
         'name',
         'room_type',
         'square_feet',
+        'capacity',
         'price_per_month',
         'is_available'
     ];
@@ -23,7 +24,7 @@ class Room extends Model
         return $this->belongsTo(BoardingHouse::class);
     }
 
-    public function roomimages()
+    public function images()
     {
         return $this->hasMany(Roomimage::class);
     }

@@ -32,7 +32,7 @@ class CategoryResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255)
-                    ->debounce(400)
+                    ->debounce(500)
                     ->reactive()
                     ->afterStateUpdated(function ($state, callable $set) {
                         $set('slug', Str::slug($state));
