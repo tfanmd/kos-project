@@ -57,9 +57,19 @@ class BoardingHouseResource extends Resource
                                 Forms\Components\TextArea::make('address')
                                     ->required(),
                             ]),
-                        Forms\Components\Tabs\Tab::make('Tab 2')
+                        Forms\Components\Tabs\Tab::make('Bonus Kos')
                             ->schema([
-                                // ...
+                                Forms\Components\Repeater::make('bonuses')
+                                    ->schema([
+                                        Forms\Components\FileUpload::make('image')
+                                            ->image()
+                                            ->directory('bonus')
+                                            ->required(),
+                                        Forms\Components\TextInput::make('name')
+                                            ->required(),
+                                        Forms\Components\TextInput::make('description')
+                                            ->required(),
+                                    ]),
                             ]),
                         Forms\Components\Tabs\Tab::make('Tab 3')
                             ->schema([
