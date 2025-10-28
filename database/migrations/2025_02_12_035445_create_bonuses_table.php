@@ -16,7 +16,8 @@ return new class extends Migration
             $table->foreignId('boarding_house_id')->constrained()->cascadeOnDelete();
             $table->string('image');         
             $table->string('name');         
-            $table->string('description');         
+            $table->string('description');
+            $table->softDeletes();     
             $table->timestamps();
         });
     }
