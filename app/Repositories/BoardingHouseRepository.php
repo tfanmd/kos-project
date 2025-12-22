@@ -57,6 +57,4 @@ class BoardingHouseRepository implements BoardingHouseRepositoryInterface
     {
         return BoardingHouse::where('slug', $slug)->first(); 
     }
-
-
 }
