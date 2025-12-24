@@ -14,5 +14,10 @@ class Category extends Model
         'image',
         'name',
         'slug'
-    ]; 
+    ];
+
+    public function boardingHouses()
+    {
+        return $this->hasMany(BoardingHouse::class);
+    }
 }

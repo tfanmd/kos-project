@@ -28,4 +28,6 @@ class BoardingHouseController extends Controller
 
         return view ('pages.boarding-house.find', compact('cities', 'categories'));
     }
+
+    
 }
